@@ -20,6 +20,7 @@ from django.urls import path, include
 
 #To specify paths app
 urlpatterns = [
-    path('', include('calc.urls')),
+    path('', include('calc.urls')), # include(), chops off whatever part of the URL matched up to that point sends remaining string to the included URLconf for further processing
+    path('polls', include('calc.urls')),
     path('admin/', admin.site.urls),
 ]
